@@ -115,7 +115,7 @@ $(function () {
 			var form = $("#formu");
 
 			if (validarFormulario(form)) {
-				$("#enviar").attr("disabled", "true");
+				$("#enviar-m").attr("disabled", "true");
 
 				let datosForm = form.serializeObject();
 			/*DATOS A FIREBASE*/
@@ -182,7 +182,6 @@ $(function () {
 			error: function (xhr) {
 				console.log(xhr.status);
 				console.log(xhr.responseText);
-				form.submit();
 			},
 		});
 	}
