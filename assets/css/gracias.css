@@ -1,0 +1,187 @@
+:root {
+                --verde: #018F70;
+                --blanco: white;
+                --rojo: #df0209;
+                --verde-aqua: #6DFFDE;
+                --verde-form: #07C19E;
+                --negro: #000;
+}
+
+/* HERO*/
+html,
+body {
+                background-color: var(--verde-aqua) !important;
+                background-image: url("../img/back-gracias.jpg");
+                background-size: cover;
+                background-position: top left;
+                font-family: effra, sans-serif;
+                background-repeat: no-repeat;
+}
+
+main {
+
+                height: 500px;
+}
+
+.logotipo {
+                background-image: url("../img/Logo.png");
+}
+
+.navbares {
+                height: 100px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+}
+
+.text-principal-gracias {
+                font-size: 35px;
+                font-family: effra, sans-serif;
+                font-weight: bold;
+                color: var(--verde);
+                text-align: center;
+                font-style: italic;
+}
+
+.text-sub-gracias {
+                font-size: 25px;
+                font-family: effra, sans-serif;
+                font-weight: bold;
+                color: var(--verde);
+                text-align: center;
+                margin-top: 80px;
+                width: 850px;
+                margin-right: auto;
+                margin-left: auto;
+
+}
+
+.container-margen {
+                margin-top: 150px;
+}
+
+@media (min-width: 539px) and (max-width: 768px) {
+
+                html,
+                body {
+                                background-color: var(--verde-aqua) !important;
+                                background-image: url("../img/back-gracias-768.jpg");
+                                /*background-size: cover;*/
+                                background-position: top left;
+                                font-family: effra, sans-serif;
+                                background-repeat: no-repeat;
+                }
+
+                .container-margen {
+                                margin-top: 50px;
+                }
+
+                .text-sub-gracias {
+                                font-size: 25px;
+                                font-family: effra, sans-serif;
+                                font-weight: bold;
+                                color: var(--verde);
+                                text-align: center;
+                                margin-top: 50px;
+                                width: 750px;
+                                margin-right: auto;
+                                margin-left: auto;
+
+                }
+}
+
+@media (min-width: 426px) and (max-width: 540px) {
+
+                html,
+                body {
+                                background-color: var(--verde-aqua) !important;
+                                background-image: url("../img/back-540.jpg");
+                                background-size: cover;
+                                background-position: top left;
+                                font-family: effra, sans-serif;
+                                background-repeat: no-repeat;
+                }
+
+                .container-margen {
+                                margin-top: 80px;
+                }
+
+                .text-sub-gracias {
+                                font-size: 25px;
+                                font-family: effra, sans-serif;
+                                font-weight: bold;
+                                color: var(--verde);
+                                text-align: center;
+                                margin-top: 50px;
+                                width: 310px;
+                                margin-right: auto;
+                                margin-left: auto;
+
+                }
+
+                .navbares {
+                                height: 100px;
+                                padding-top: 20px;
+                                padding-bottom: 20px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+
+                html,
+                body {
+                                background-color: var(--verde-aqua) !important;
+                                background-image: url("../img/back-540.jpg");
+                                background-size: cover;
+                                background-position: top left;
+                                font-family: effra, sans-serif;
+                                background-repeat: no-repeat;
+                }
+
+                .container-margen {
+                                margin-top: 50px;
+                }
+.text-principal-gracias {
+                font-size: 30px;
+                font-family: effra, sans-serif;
+                font-weight: bold;
+                color: var(--verde);
+                text-align: center;
+                font-style: italic;
+}
+                .text-sub-gracias {
+                                font-size: 20px;
+                                font-family: effra, sans-serif;
+                                font-weight: bold;
+                                color: var(--verde);
+                                text-align: center;
+                                margin-top: 50px;
+                                width: 310px;
+                                margin-right: auto;
+                                margin-left: auto;
+
+                }
+
+                .navbares {
+                                height: 100px;
+                                padding-top: 20px;
+                                padding-bottom: 20px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                }
+}

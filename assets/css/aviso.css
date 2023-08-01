@@ -1,0 +1,158 @@
+:root {
+  --verde: #018F70;
+  --blanco: white;
+  --rojo: #df0209;
+  --verde-aqua: #6DFFDE;
+  --verde-form: #07C19E;
+  --negro: #000;
+}
+
+@font-face {
+	font-family: Effra-Light;
+	src: url(../fonts/Effra-Light.ttf);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: effra;
+	src: url(../fonts/Effra_Rg.ttf);
+	font-display: swap;
+}
+
+html,body {
+  background-color: var(--verde);
+  font-size: 10px;
+  font-family: effra;
+}
+
+.navbares {
+  height: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--verde);
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.caja-text-aviso {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.text-principal {
+  font-size: 28px;
+  font-family: Effra-Light;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--amarillo);
+  text-align: center;
+}
+
+.text-sub {
+  font-size: 20px;
+  font-family: effra;
+  color: var(--azul);
+  text-align: justify;
+}
+
+.desktop-none {
+  display: none;
+}
+
+
+@media screen and (max-width:2560px) {
+  .position {
+    position: absolute;
+    top: inherit;
+    left: 620px;
+  }
+
+  #principal {
+    /* background-color: var(--azul); */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .conten {
+    width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    align-content: center;
+    background-color: var(--blanco);
+    box-shadow: 0 9px 0px 0px white,			0 -9px 0px 0px white,			12px 0 15px -4px rgba(112, 112, 112, 0.8),			-12px 0 15px -4px rgba(112, 112, 112, 0.8);
+  }
+
+}
+
+@media screen and (max-width: 1440px) {
+  .position-hero {
+    position: absolute;
+    top: 0;
+    left: 40px;
+  }
+
+  .conten {
+    width: auto;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .desktop-none {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .text-principal {
+  	padding-top: 100px;
+  }
+  .caja-text-aviso {
+  	margin-left: 20px;
+  	margin-right: 20px;
+  }
+  .navbares-1 {
+    height: 90px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .desktop-none {
+    display: block;
+  }
+
+  .movil-none {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .navbares {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navbares-1 {
+    height: 100px;
+  }
+
+  .navbares {
+    height: 170px;
+  }
+}
