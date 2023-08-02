@@ -1,48 +1,18 @@
-# Select what we should cache
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-  - vendor/
-
-before_script:
-  # Sanity checks
-  - hostname
-  - whoami
-  - pwd
-  - git --version
-  - composer --version
-  - php --version
-
-  # Create staging directory
-  - mkdir -p build
-
-  # Inject PHPUnit configuration
-  - cp "$PHP_UNIT_XML" ./phpunit.xml
-
-  # Install composer dependencies
-  - composer install --no-progress --no-interaction --prefer-dist --optimize-autoloader
-
-analyze:app:
-  tags: 
-    - ubuntu18
-    - codeigniter4
+pages:
+  stage: deploy
+  timeout: 10 minutes
+  dependencies:
+    - test:php
+  environment:
+    name: production
+    url: https://aplus-framework.gitlab.io
   script:
-    - deptrac analyze --cache-file=build/deptrac.cache
-    - phpcpd app/ tests/
-    - vendor/bin/phpstan analyze
-    - vendor/bin/psalm
-    - rector process --dry-run --no-progress-bar
-
-lint:app:
-  tags: 
-    - ubuntu18
-    - codeigniter4
-  script:
-    - vendor/bin/php-cs-fixer fix --verbose --ansi --dry-run --using-cache=no --diff
-
-test:app:
-  tags: 
-    - ubuntu18
-    - codeigniter4
-  script:
-    - vendor/bin/phpunit --verbose --coverage-text
+    - mv public/ app-public/
+    - mkdir public/
+    - mv build/coverage/ public/
+    - mv build/docs/ public/
+  artifacts:
+    paths:
+      - public/
+  only:
+    - master
