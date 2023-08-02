@@ -1,28 +1,11 @@
-name: Deploy CodeIgniter 3
+image: php:5.6
 
-on:
-  push:
-    branches:
-      - version-2
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-
-      - name: Install Composer dependencies
-        run: composer install
-
-      - name: Deploy CodeIgniter 3
-        run: |
-          # Replace with your deployment commands
-          echo "Deploying CodeIgniter 3"
-          # Example: rsync -avz --exclude='.git' --exclude='vendor' . user@server:/path/to/destination
+pages:
+  stage: deploy
+  script:
+    - echo "Sitio in deploy"
+  artifacts:
+    paths:
+      - index.php
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
