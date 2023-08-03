@@ -32,12 +32,6 @@ before_script:
 services:
   - mysql:5.7
 
-# Set any variables we need
-variables:
-  # Configure mysql environment variables (https://hub.docker.com/r/_/mysql/)
-  MYSQL_DATABASE: mysql_database
-  MYSQL_ROOT_PASSWORD: mysql_strong_password
-
 # Run our tests
 # If Xdebug was installed you can generate a coverage report and see code coverage metrics.
 test:
